@@ -28,13 +28,13 @@
 typedef NodoLista VECINO;
 
 typedef struct _nodo{
-	char color;   //W: blanco; B:negro; G:gris 
+	char color;    // W: blanco; B:negro; G:gris 
 	int distancia;
 	int padre;
 	VECINO *vecino;
 }Nodo;
 
-int inicializaVecinos(Nood *grafo[tam]){
+int inicializaVecinos(Nodo *grafo[tam]){
 	for(int i=0; i<tam; i++){
 		grafo[i].vecino = NULL;
 	}
