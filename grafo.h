@@ -8,3 +8,35 @@
 #define STDLIB_H
 #endif
 
+#ifndef STRING_H
+#include <string.h>
+#define STRING_H
+#endif
+
+#ifndef LISTA_H
+#include "lista.h"
+#define LISTA_H
+#endif
+
+#ifndef COLA_H
+#include "cola.h"
+#define COLA_H
+#endif
+
+#define tam 9
+
+typedef NodoLista VECINO;
+
+typedef struct _nodo{
+	char color;   //W: blanco; B:negro; G:gris 
+	int distancia;
+	int padre;
+	VECINO *vecino;
+}Nodo;
+
+int inicializaVecinos(Nood *grafo[tam]){
+	for(int i=0; i<tam; i++){
+		grafo[i].vecino = NULL;
+	}
+	return 1;
+}
