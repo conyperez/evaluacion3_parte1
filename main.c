@@ -13,7 +13,11 @@
 #define GRAFO_H
 #endif
 
+typedef Nodo Grafo;
+
 int main(){
+  Grafo grafo[tam];
+  inicializaVecinos(grafo);
 
   return 0;
 }
