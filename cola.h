@@ -64,13 +64,3 @@ void eliminaCola(Cola *cola){
     free(cola);
 }
 
-void recorrerCola(Cola *cola){
-    printf("Inicio Cola\n");
-    printf("Tamaño cola: %d\n", cola->ultimo+1);
-    int i;
-    for(i=0; i<=cola->ultimo; i++){
-        printf("Lista[%d] = %d\n", i, cola->elementos[i]);
-    }
-    printf("Fin Cola\n");
-}
-
