@@ -8,11 +8,6 @@
 #define STDLIB_H
 #endif
 
-#ifndef STRING_H
-#include <string.h>
-#define STRING_H
-#endif
-
 #ifndef LISTA_H
 #include "lista.h"
 #define LISTA_H
@@ -34,7 +29,7 @@ typedef struct _nodo{
 	VECINO *vecino;
 }Nodo;
 
-int inicializaVecinos(Nodo *grafo[tam]){
+int inicializaVecinos(Nodo grafo[tam]){
 	for(int i=0; i<tam; i++){
 		grafo[i].vecino = NULL;
 	}
