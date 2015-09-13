@@ -30,12 +30,3 @@ NodoLista *insertaNodo(NodoLista *lista, int e){
     }
     return lista;
 }
-
-void muestraLista(NodoLista *lista){
-    NodoLista *tmp;
-    while(tmp != NULL){
-        printf("%d -> ", tmp->idNodo);
-        tmp = tmp->sgte;
-    }
-    printf("NULL\n");
-}
