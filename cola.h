@@ -8,11 +8,6 @@
 #define STDLIB_H
 #endif
 
-#ifndef STRING_H
-#include <string.h>
-#define STRING_H
-#endif
-
 typedef struct _cola{
 	int capacidad;
 	int ultimo;
@@ -24,7 +19,7 @@ Cola *creaCola(int unaCapacidad){
 	tmp = malloc(sizeof(Cola));
 	tmp->capacidad = unaCapacidad;
 	tmp->ultimo = -1;
-	tmp->elementos = malloc(tmp->capacidad*sizeof(char));
+	tmp->elementos = malloc(tmp->capacidad*sizeof(int));
 	return tmp;
 }
 
@@ -36,12 +31,12 @@ int esVaciaCola(Cola *cola){
 	}
 }
 
-int encolar(Cola *cola, char unaUbicacion){
+int encolar(Cola *cola, int valor){
     if(cola->ultimo+1 == cola->capacidad){
         return -1;
     }
     cola->ultimo++;
-    cola->elementos[cola->ultimo] = unaUbicacion;
+    cola->elementos[cola->ultimo] = valor;
     return 1;
 }
 
