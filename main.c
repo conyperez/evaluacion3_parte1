@@ -20,6 +20,7 @@ typedef Nodo Grafo;
 int main(){
   
   Grafo grafo[tam];
+  
   inicializaVecinos(grafo);
 
   agregaArista(grafo, 0, 1);
@@ -35,6 +36,12 @@ int main(){
   agregaArista(grafo, 6, 7);
   agregaArista(grafo, 5, 7);
   agregaArista(grafo, 7, 8);
+
+  printf("RECORRIDO DE GRAFO POR: BREADTH-FIRST SEARCH (BFS)\n\n");
+  BFS(grafo, 0);
+
+  printf("\nRECORRIDO DE GRAFO POR: DEPTH-FIRST SEARCH (DFS)\n\n");
+  DFS(grafo);
 
   return 0;
 }
