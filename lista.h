@@ -8,20 +8,15 @@
 #define STDLIB_H
 #endif
 
-#ifndef STRING_H
-#include <string.h>
-#define STRING_H
-#endif
-
 typedef struct tipo_nodo{
-	char *ubicacion;
+	int idNodo;
 	struct tipo_nodo *sgte;
 }NodoLista;
 
-NodoLista *insertaNodo(NodoLista *lista, char unaUbicacion){
+NodoLista *insertaNodo(NodoLista *lista, int e){
     NodoLista *nuevo;
     nuevo = (NodoLista*)malloc(sizeof(NodoLista));
-    nuevo->ubicacion = unaUbicacion;
+    nuevo->idNodo = e;
     nuevo->sgte = NULL;
     if(lista == NULL){
         lista = nuevo;
@@ -39,7 +34,7 @@ NodoLista *insertaNodo(NodoLista *lista, char unaUbicacion){
 void muestraLista(NodoLista *lista){
     NodoLista *tmp;
     while(tmp != NULL){
-        printf("%c -> ", tmp->ubicacion);
+        printf("%d -> ", tmp->idNodo);
         tmp = tmp->sgte;
     }
     printf("NULL\n");
