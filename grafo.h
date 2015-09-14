@@ -59,7 +59,7 @@ int BFS(Nodo grafo[tam], int s){
     printf("   Color: Gris \n   Distancia = 0 \n   Padre = -1 (NULL)\n");
     Cola *Q = creaCola(tam);
     encolar(Q, s);
-    printf("\nCola inicializada\n");
+    printf("\nCola inicializada: se agrego el vertice %d\n", s);
     while(!esVaciaCola(Q)){
         i = decolar(Q);
         printf("\nVertice sacado de la cola: %d\n", i);
@@ -123,7 +123,7 @@ int visitarDFS(Nodo grafo[tam], int i){
     }
     grafo[i].color = 'B';
     tiempo++;
-    printf("Vertice %d\n", i);
+    printf("Vertice %d, no tiene mas vecinos\n", i);
     printf("   Color: Negro\n   Tiempo = %d\n\n", tiempo);
     printf("------------------------\n");
     return 1;
