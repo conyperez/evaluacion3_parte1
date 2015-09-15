@@ -11,7 +11,7 @@
 typedef struct _cola{
 	int capacidad;
 	int ultimo;
-	char *elementos;
+	int *elementos;
 }Cola;
 
 Cola *creaCola(int unaCapacidad){
